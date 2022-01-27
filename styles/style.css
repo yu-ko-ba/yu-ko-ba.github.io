@@ -26,3 +26,8 @@ h1 {
 p {
     font-size: min(10vw, 40px);
 }
+
+
+a {
+    color: #1565c0;
+}
