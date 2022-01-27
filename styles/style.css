@@ -1,3 +1,21 @@
+body {
+    margin: 0px;
+}
+
+
+header {
+    padding: 15px;
+    padding-right: auto;
+
+    background-color: #bbdefb;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+
 #links {
     position: absolute;
     top: 50%;
