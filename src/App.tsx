@@ -1,25 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import ImageList from '@mui/material/ImageList';
+import AppCard from './components/AppCard';
+import { textAlign } from '@mui/system';
+
+export type AppData = {
+  name: string;
+  url: string;
+  screenshotUrl: string;
+}
 
 function App() {
+  const apps: AppData[] = [
+    {
+      name: "今日の日付",
+      url: "https://yu-ko-ba.github.io/what-is-the-date-today/",
+      screenshotUrl: "https://raw.githubusercontent.com/yu-ko-ba/what-is-the-date-today/main/screenshot.png",
+    },
+    {
+      name: "年齢の計算",
+      url: "https://yu-ko-ba.github.io/how-old-am-i/",
+      screenshotUrl: "https://raw.githubusercontent.com/yu-ko-ba/how-old-am-i/main/screenshot.png",
+    },
+    {
+      name: "クリップボードへコピー",
+      url: "https://yu-ko-ba.github.io/copy-to-clipboard/",
+      screenshotUrl: "https://raw.githubusercontent.com/yu-ko-ba/copy-to-clipboard/main/screenshot.png",
+    },
+    {
+      name: "乱数の生成",
+      url: "https://yu-ko-ba.github.io/get-random-int/",
+      screenshotUrl: "https://raw.githubusercontent.com/yu-ko-ba/get-random-int/main/screenshot.png",
+    },
+  ];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <ImageList sx={{textAlign: "center"}}>
+        {apps.map((v: AppData) => <AppCard appData={v}></AppCard>)}
+      </ImageList>
+    </>
   );
 }
 
