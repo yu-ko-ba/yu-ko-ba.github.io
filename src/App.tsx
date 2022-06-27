@@ -2,6 +2,7 @@ import React from 'react';
 import ImageList from '@mui/material/ImageList';
 import AppCard from './components/AppCard';
 import { textAlign } from '@mui/system';
+import { AppBar, Toolbar, Typography } from '@mui/material';
 
 export type AppData = {
   name: string;
@@ -34,6 +35,11 @@ function App() {
   ];
   return (
     <>
+      <AppBar position='static'>
+        <Toolbar>
+          <Typography variant='h4'>{document.title}</Typography>
+        </Toolbar>
+      </AppBar>
       <ImageList sx={{textAlign: "center"}}>
         {apps.map((v: AppData) => <AppCard appData={v}></AppCard>)}
       </ImageList>
