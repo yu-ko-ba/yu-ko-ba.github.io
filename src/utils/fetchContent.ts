@@ -1,5 +1,5 @@
 import axios from "axios";
-import { ContentType } from "./fetchContents";
+import ContentType from "../types/ContentType";
 
 const fetchContent = async (url: string): Promise<ContentType> => {
   const res = await axios.get(url)

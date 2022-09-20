@@ -1,4 +1,5 @@
-import { ContentType, fetchContents } from "../../src/utils/fetchContents"
+import ContentType from "../../src/types/ContentType"
+import fetchContents from "../../src/utils/fetchContents"
 
 describe('get contents', () => {
   it('should return to the contents array', async () => {
