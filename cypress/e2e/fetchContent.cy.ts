@@ -4,6 +4,7 @@ import fetchContent from "../../src/utils/fetchContent"
 describe('fetch content', () => {
   it('should return to the content', async () => {
     const good: ContentType = {
+      url: "https://yu-ko-ba.github.io/what-is-the-date-today/",
       title: "今日の日付",
       description: "現在の日付を表示するWebアプリ",
       image: "https://raw.githubusercontent.com/yu-ko-ba/what-is-the-date-today/main/screenshot.png"

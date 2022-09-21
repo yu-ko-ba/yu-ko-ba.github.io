@@ -1,11 +1,11 @@
 import axios from "axios";
 import ContentType from "../types/ContentType";
+import { parse } from "node-html-parser";
 
 const fetchContent = async (url: string): Promise<ContentType> => {
   const res = await axios.get(url)
-  const parser = new DOMParser()
-  const dom = parser.parseFromString(res.data, "text/html")
-  const metas = dom.head.querySelectorAll("meta")
+  const dom = parse(res.data)
+  const metas = dom.querySelectorAll("meta")
 
   let title = ""
   let description = ""
@@ -26,6 +26,7 @@ const fetchContent = async (url: string): Promise<ContentType> => {
   }
 
   return {
+    url: url,
     title: title,
     description: description,
     image: imageUrl
