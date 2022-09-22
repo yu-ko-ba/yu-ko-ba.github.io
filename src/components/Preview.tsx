@@ -1,4 +1,5 @@
 import { Card, CardContent, CardMedia, Typography } from "@mui/material"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 import fetchContent from "../utils/fetchContent"
 
@@ -22,23 +23,25 @@ const Preview = ({ src }: PreviewPropsType) => {
   }, [])
 
   return (
-    <a href={src} target="_blank" rel="noopener noreferrer">
-      <Card>
-        <CardMedia
-          component="img"
-          alt={description}
-          image={imageUrl}
-        />
-        <CardContent>
-          <Typography variant="subtitle2">
-            {title}
-          </Typography>
-          <Typography variant="body2" color="text.secondary">
-            {description}
-          </Typography>
-        </CardContent>
-      </Card>
-    </a>
+    <Link href={src}>
+      <a target="_blank" rel="noopener noreferrer">
+        <Card>
+          <CardMedia
+            component="img"
+            alt={description}
+            image={imageUrl}
+          />
+          <CardContent>
+            <Typography variant="subtitle2">
+              {title}
+            </Typography>
+            <Typography variant="body2" color="text.secondary">
+              {description}
+            </Typography>
+          </CardContent>
+        </Card>
+      </a>
+    </Link>
   )
 }
 
