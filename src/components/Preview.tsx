@@ -22,7 +22,7 @@ const Preview = ({ src }: PreviewPropsType) => {
   }, [])
 
   return (
-    <a href={src}>
+    <a href={src} target="_blank" rel="noopener noreferrer">
       <Card>
         <CardMedia
           component="img"

@@ -10,10 +10,10 @@ export default function Home() {
   return (
     <ThemeProvider theme={theme}>
       <Container maxWidth="md">
-        <Grid container>
+        <Grid container spacing={4}>
           {appUrls.map((url) => (
-            <Grid item>
-              <Preview key={url} src={url} />
+            <Grid item xs={6} sm={4} key={url}>
+              <Preview src={url} />
             </Grid>
           ))}
         </Grid>
