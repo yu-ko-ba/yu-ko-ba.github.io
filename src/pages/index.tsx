@@ -9,10 +9,12 @@ import fetchContent from "../utils/fetchContent";
 export default function Home() {
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth="sm">
-        <Grid container spacing={4}>
+      <Container maxWidth="md">
+        <Grid container>
           {appUrls.map((url) => (
-            <Preview key={url} src={url} />
+            <Grid item>
+              <Preview key={url} src={url} />
+            </Grid>
           ))}
         </Grid>
       </Container>
