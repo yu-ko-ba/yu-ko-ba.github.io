@@ -1,5 +1,5 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material"
-import Link from "next/link"
+import { Card, CardContent, CardMedia, Link, Typography } from "@mui/material"
+import NextLink from "next/link"
 import { useEffect, useState } from "react"
 import fetchContent from "../utils/fetchContent"
 
@@ -23,8 +23,8 @@ const Preview = ({ src }: PreviewPropsType) => {
   }, [])
 
   return (
-    <Link href={src}>
-      <a target="_blank" rel="noopener noreferrer">
+    <NextLink href={src} passHref>
+      <Link target="_blank" rel="noopener noreferrer">
         <Card>
           <CardMedia
             component="img"
@@ -40,8 +40,8 @@ const Preview = ({ src }: PreviewPropsType) => {
             </Typography>
           </CardContent>
         </Card>
-      </a>
-    </Link>
+      </Link>
+    </NextLink>
   )
 }
 
