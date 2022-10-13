@@ -5,6 +5,7 @@ const appUrls = [
   "https://yu-ko-ba.github.io/get-random-int/",
   "https://yu-ko-ba.github.io/genkaikor/",
   "https://yu-ko-ba.github.io/repeater/",
+  "https://yu-ko-ba.github.io/post-image-as-base64-example/",
 ]
 
 export default appUrls
