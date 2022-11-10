@@ -1,29 +1,16 @@
 import { Card, CardContent, CardMedia, Link, Typography } from "@mui/material"
 import NextLink from "next/link"
-import { useEffect, useState } from "react"
-import fetchContent from "../utils/fetchContent"
 
 type PreviewPropsType = {
-  src: string
+  title: string
+  description: string
+  imageUrl: string
+  website: string
 }
 
-const Preview = ({ src }: PreviewPropsType) => {
-  const [title, setTitle] = useState("")
-  const [description, setDescription] = useState("")
-  const [imageUrl, setImageUrl] = useState("")
-
-  // 必要なデータを取得する
-  useEffect(() => {
-    fetchContent(src)
-      .then((c) => {
-        setTitle(c.title)
-        setDescription(c.description)
-        setImageUrl(c.image)
-      })
-  }, [])
-
+const Preview = ({ title, description, imageUrl, website }: PreviewPropsType) => {
   return (
-    <NextLink href={src} passHref>
+    <NextLink href={website} passHref>
       <Link target="_blank" rel="noopener noreferrer">
         <Card>
           <CardMedia

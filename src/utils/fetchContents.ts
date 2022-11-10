@@ -5,7 +5,7 @@ import fetchContent from "./fetchContent"
 const fetchContents = async (urls: string[]): Promise<ContentType[]> => {
   const result: ContentType[] = []
   for await (const url of urls) {
-    fetchContent(url)
+    await fetchContent(url)
       .then((c: ContentType) => {
         result.push({
           url: c.url,
@@ -13,6 +13,11 @@ const fetchContents = async (urls: string[]): Promise<ContentType[]> => {
           description: c.description,
           image: c.image
         })
+      })
+      .catch((err: Error) => {
+        if (process.env.NODE_ENV !== "production") {
+          console.log(err);
+        }
       })
   }
 
