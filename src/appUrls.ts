@@ -7,6 +7,7 @@ const appUrls = [
   "https://yu-ko-ba.github.io/repeater/",
   "https://yu-ko-ba.github.io/post-image-as-base64-example/",
   "https://ym-previewer.vercel.app",
+  "https://password-generator-nine-blond.vercel.app",
 ]
 
 export default appUrls
