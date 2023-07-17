@@ -8,6 +8,7 @@ const appUrls = [
   "https://yu-ko-ba.github.io/post-image-as-base64-example/",
   "https://ym-previewer.vercel.app",
   "https://yu-ko-ba.github.io/location-remover/",
+  "https://password-generator-nine-blond.vercel.app",
   "https://non-drawing-probability-calculator.vercel.app",
 ];
 
