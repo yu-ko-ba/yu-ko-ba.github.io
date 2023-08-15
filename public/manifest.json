@@ -1,0 +1,22 @@
+{
+  "name": "yu-ko-ba",
+  "short_name": "yu-ko-ba.github.io",
+  "theme_color": "#bbdefb",
+  "backgroud_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/maskable_icon_x128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/maskable_icon.png",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
