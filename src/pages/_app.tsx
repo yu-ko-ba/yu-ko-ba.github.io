@@ -1,7 +1,14 @@
-import type { AppProps } from 'next/app'
+import type { AppProps } from "next/app";
+import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("sw.js", { scope: "/" });
+    }
+  }, []);
+
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+export default MyApp;
