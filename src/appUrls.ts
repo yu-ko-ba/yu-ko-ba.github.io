@@ -10,6 +10,7 @@ const appUrls = [
   "https://yu-ko-ba.github.io/location-remover/",
   "https://password-generator-nine-blond.vercel.app",
   "https://non-drawing-probability-calculator.vercel.app",
+  "https://to-leet.vercel.app/",
 ];
 
 export default appUrls;
